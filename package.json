@@ -1,0 +1,31 @@
+{
+  "name": "node-gyp-electron-win32",
+  "version": "0.0.1",
+  "description": "node-gyp + electron + node-addon-api win32 test",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "install": "node-gyp rebuild --target=16.0.5 --arch=x64 --dist-url=https://electronjs.org/headers",
+    "app": "electron src/index.js",
+    "pack": "node electron-packager-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FLevent29/node-gyp-electron-win32.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FLevent29/node-gyp-electron-win32/issues"
+  },
+  "homepage": "https://github.com/FLevent29/node-gyp-electron-win32#readme",
+  "dependencies": {
+    "bindings": "^1.5.0"
+  },
+  "devDependencies": {
+    "electron": "16.0.5",
+    "electron-packager": "^15.4.0",
+    "node-addon-api": "4.2.0",
+    "node-gyp": "8.4.1"
+  }
+}
